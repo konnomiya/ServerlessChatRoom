@@ -9,8 +9,7 @@ A memo for the practice using Azure SignalR &amp; Azure Functions to build a ser
 3) For broadcasting a message, client side sends a http request to trigger the **broadcast** http trigger function, gets the SignalRMessage containing target method name and arguments that a hub can call.
 4) For echo and DM, it works similar as broadcasting as long as the user is authenticated by userId when starts to negotiate at the beginning.
 
-## Important Codes Go Trough
-### DM feature
+## DEMO - DM Feature
 When client side starts to negotiate, we parse his/her name as userId. This helps SignalR send the message to specific user.
 ```javascript
             function joinChatRoom(userId) {
