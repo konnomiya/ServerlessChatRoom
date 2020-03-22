@@ -25,8 +25,8 @@ When client side starts to negotiate, we parse his/her name as userId. This help
            
             joinChatRoom(username)
 ```
-Since I didn't user Azure function built-in authentication service, the headers used to pass userId should be *x-ms-signalr-userid*
-This header can be found from this microsoft [docs](https://github.com/Azure/azure-functions-signalrservice-extension/blob/bcc4e549f8306b0f869e001572ec35ce69d81f6c/samples/simple-chat/content/index.html#L143)
+Since I didn't user Azure function built-in authentication service, the headers used to pass userId should be *x-ms-signalr-userid*.
+This header can be found from this Microsoft [docs](https://github.com/Azure/azure-functions-signalrservice-extension/blob/bcc4e549f8306b0f869e001572ec35ce69d81f6c/samples/simple-chat/content/index.html#L143)
 ```C#
        [FunctionName("negotiate")]
         public static SignalRConnectionInfo GetSignalRInfo(
@@ -36,7 +36,7 @@ This header can be found from this microsoft [docs](https://github.com/Azure/azu
             return connectionInfo;
         }
 ```
-when user inputs message and the specific user name, then clicked **DM**, this will invoke the echo function on the client side
+When user inputs message and the specific user name, then clicks **DM**, this will invoke the echo function on the client side
 ```javascript
                     document.getElementById('senduser').addEventListener('click', function (event) {
                     // call the echo method on the hub.
@@ -67,7 +67,7 @@ when user inputs message and the specific user name, then clicked **DM**, this w
                 });
             }
 ```
-The echo function on the client side send http request to trigger the **senduser** http trigger function, this function helps SignalR to only send this message to the specific user:
+The echo function on the client side sends http request to trigger the **senduser** http trigger function, this function helps SignalR to only send this message to the specific user:
 ```csharp
         [FunctionName("senduser")]
         public static Task PrivateMessageToQueue(
