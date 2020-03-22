@@ -1,6 +1,8 @@
 # ServerlessChatRoom
 A memo for the practice using Azure SignalR &amp; Azure Functions to build a serverless chat room. Have broadcast, echo and DM features.
 
+![Image of chatroom](images/chatroom_joined_broadcast.PNG)
+
 ## Workflow Overview
 1) When a user joins the chat room, a http request is sent to trigger the **negotiate** http trigger function and get the SignalR URL and access token.
 2) The client side starts connection with SignalR with the previous URL and access token.
@@ -90,7 +92,10 @@ Target method name should match the name on this hub:
 ```javascript
         connection.on('echo', messageCallback);
 ```
-Results:
+Demo Results(Only jun receive message from nino):
+![Image of dm](images/chatroom_dm_1.PNG)
+![Image of dm](images/chatroom_dm_2.PNG)
+![Image of dm](images/chatroom_dm_3.PNG)
 
 
 ## How To Use For Fun On Local
@@ -110,7 +115,8 @@ Results:
 3) Upload *index.html* and *site.css* under the correct paths which match the routes you set in the *proxies.json*
 4) Test it as you want **:)**
 
-
+## Resources
+Apart from the official Microsoft tutorials, this [repository](https://github.com/yossy6954/ServerlessChatRoom) gives me a whole view of how to deploy this project to Azure and internal interactions among client-signalr-functions. Many thanks.
 
 
 
