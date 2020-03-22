@@ -95,6 +95,17 @@ Results:
 
 ## How To Use For Fun On Local
 1) Run the azure functions. Remember to put your Azure SignalR connection string in the *local.settings.json* file. CORS is already set as "\*" on local
+2) Run *index.html* using browser
+3) Just play with yourself **:)**
+
+## How To Use on Azure Portal
+1) Publish the Azure Functions to Azure and add your Azure SignalR endpoint to this Function APP CORS
+2) Change the corresponding URL in *index.html* to the published function app link. eg:
+> http://localhost:7071/api/negotiate  --> https:/<function_app_name>.azurewebsites.net/api/negotiate
+3) Upload *index.html* to Blob storage after you created a Blob container under a storage account 
+
+
+
 
 
 
