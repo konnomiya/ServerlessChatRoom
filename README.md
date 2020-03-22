@@ -91,7 +91,7 @@ Target method name should match the name on this hub:
 ```javascript
         connection.on('echo', messageCallback);
 ```
-**Demo Results(Only jun receive message from nino):**
+**Demo Results(Only jun receives message from nino):**
 ![Image of dm](images/chatroom_dm_1.PNG)
 ![Image of dm](images/chatroom_dm_2.PNG)
 ![Image of dm](images/chatroom_dm_3.PNG)
