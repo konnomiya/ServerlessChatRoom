@@ -99,7 +99,7 @@ Results:
 3) Just play with yourself **:)**
 
 ## How To Use on Azure Portal
-Prep: Make sure have a storage account. Then go to container and add a Blob storage container. In my practice I created a *wwwroot* Blob container and uploaded *index.html*, also uploaded the *cite.css* file under css folder (set in advanced settings) in this container.
+**Prep**: Make sure have a storage account. Then go to container and add a Blob storage container. In my practice I created a *wwwroot* Blob container and uploaded *index.html*, also uploaded the *cite.css* file under css folder (set in advanced settings) in this container.
 
 1) Publish the Azure Function App to Azure. 
 - Remember to create *proxies.json* and set the backenduri to read the files from Blob. Before publishing you have to set this file's properties >Copy to Output Directory -> **Copy Always**. 
